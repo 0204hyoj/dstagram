@@ -19,10 +19,16 @@
       {{form.as_p}}
       {% csrf_token %}
       <input type="submit" class="btn btn-danger" value="Confirm">
+      <button type="button" class="btn btn-primary" id="cancel-btn">Cancel</button>
     </form>
   </div>
   <div class="col-md-2"></div>
 </div>
+<script>
+  document.getElementById("cancel-btn").addEventListener("click", function() {
+    window.history.back();
+  });
+</script>
 {% endblock %}
 </body>
 </html>

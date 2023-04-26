@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block title %}- User Detail{% endblock %}
+
+{% block content %}
+
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <div style="text-align: left;" ><br><br>
+      <h1 class="user_information">회원정보</h1><br>
+        <div class="Userbox">
+          <p class="id">아이디: {{ user_object.username}}</p>
+          <p class="firstName">성: {{ user_object.first_name }}</p>
+          <p class="lastName">이름: {{ user_object.last_name }}</p>
+          <p class="gender">성별: {{ user_object.profile.gender }}</p>
+          <p class="birthday">생일: {{ user_object.profile.birthday }}</p>
+            <p class="email">이메일: {{ user_object.email }}</p><br><br><br>
+        </div>
+    </div>
+  </div>
+
+{% endblock %}
+</body>
+</html>
